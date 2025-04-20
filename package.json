@@ -14,8 +14,8 @@
   "contributes": {
     "commands": [
       {
-        "command": "flutter-web-utils-vscode.helloWorld",
-        "title": "Hello World"
+        "command": "flutter-web-utils-vscode.serveFlutterWeb",
+        "title": "Serve Flutter Web"
       }
     ]
   },
