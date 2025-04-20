@@ -1,7 +1,7 @@
 {
   "name": "flutter-web-utils-vscode",
-  "displayName": "flutter-web-utils-vscode",
-  "description": "Custom VSCode extension to assist with Flutter Web development",
+  "displayName": "flutter_web_utils_vscode",
+  "description": "Flutter Web development utilities for vscode",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.99.0"
