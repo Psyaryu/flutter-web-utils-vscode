@@ -2,7 +2,7 @@
   "name": "flutter-web-utils-vscode",
   "displayName": "flutter_web_utils_vscode",
   "description": "Flutter Web development utilities for vscode",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.99.0"
   },
@@ -16,8 +16,27 @@
       {
         "command": "flutter-web-utils-vscode.serveFlutterWeb",
         "title": "Serve Flutter Web"
+      },
+      {
+        "command": "flutter-web-utils-vscode.deployFlutterWeb",
+        "title": "Deploy Flutter Web"
       }
-    ]
+    ],
+    "configuration": {
+      "title": "Flutter Web Utils",
+      "properties": {
+        "flutterWebUtils.username": {
+          "type": "string",
+          "default": "",
+          "description": "The username used to deploy the Flutter Web app."
+        },
+        "flutterWebUtils.deployToken": {
+          "type": "string",
+          "default": "",
+          "description": "The token used to deploy the Flutter Web app."
+        }
+      }
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
@@ -28,14 +47,18 @@
     "test": "vscode-test"
   },
   "devDependencies": {
-    "@types/vscode": "^1.99.0",
+    "@types/fs-extra": "^11.0.4",
     "@types/mocha": "^10.0.10",
     "@types/node": "20.x",
+    "@types/vscode": "^1.99.0",
     "@typescript-eslint/eslint-plugin": "^8.28.0",
     "@typescript-eslint/parser": "^8.28.0",
-    "eslint": "^9.23.0",
-    "typescript": "^5.8.2",
     "@vscode/test-cli": "^0.0.10",
-    "@vscode/test-electron": "^2.4.1"
+    "@vscode/test-electron": "^2.4.1",
+    "eslint": "^9.23.0",
+    "typescript": "^5.8.2"
+  },
+  "dependencies": {
+    "fs-extra": "^11.3.0"
   }
 }
